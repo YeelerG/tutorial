@@ -10,7 +10,7 @@ class DmozSpider(scrapy.Spider):
     name = "dmoz"
     allowed_domains = ["69shu.com"]
     start_urls = [
-        "http://www.69shu.com/22453/"
+        "http://www.69shu.com/11056/"
     ]
 
     def parse(self, response):
@@ -41,5 +41,5 @@ class DmozSpider(scrapy.Spider):
             str = item['title'][0]
             href = item['link'][0]
             url = response.urljoin(href)
-            print url.encode('utf8')
+            print(url.encode('utf8'))
             yield item
